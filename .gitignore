@@ -2,3 +2,5 @@
 .claude/skills/
 .copilot/
 __pycache__/
+
+/cad/

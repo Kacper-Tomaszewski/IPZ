@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Ball Balancer/05 Geometria i wymiary.md",
+                "file": "Ball Balancer/20 Firmware - Protokół UART.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "05 Geometria i wymiary"
+              "title": "20 Firmware - Protokół UART"
             }
           }
         ],
@@ -216,6 +216,7 @@
   },
   "active": "b2d1420630f66315",
   "lastOpenFiles": [
+    "Ball Balancer/05 Geometria i wymiary.md",
     "Ball Balancer/04 Decyzje i uzasadnienia.md",
     "Ball Balancer/08 Serwa i momenty.md",
     "Projekt Ball Balancer.md.tmp.26188.d88d4a3fd29b",
@@ -232,7 +233,6 @@
     "cad/fusion/BallBalancer/__pycache__",
     "Ball Balancer/07 Cięgna i przeguby.md",
     "Ball Balancer/06 Kinematyka i zakres ruchu.md",
-    "Ball Balancer/05 Geometria i wymiary.md",
     "Ball Balancer/02 Słowniczek.md",
     "Ball Balancer/11 Regulator PID.md",
     "Ball Balancer/19 Plan prac i testy.md",
