@@ -34,7 +34,7 @@ Wszystko, czego potrzebujemy, w jednym miejscu. Powrót: [[Projekt Ball Balancer
 - [ ] Zapasowa taśma FPC do kamery (łatwo ją uszkodzić)
 - [ ] Biała kartka na dyfuzor pierścienia LED
 
-## 🛒 Tura B: reszta (ok. 65–85 zł)
+## 🛒 Tura B: reszta (ok. 90–115 zł)
 
 **Interfejs**
 - [ ] Enkoder obrotowy KY-040 z gałką (~6 zł)
@@ -44,20 +44,25 @@ Wszystko, czego potrzebujemy, w jednym miejscu. Powrót: [[Projekt Ball Balancer
 - [ ] **Zasilacz impulsowy 5 V / 4 A** + gniazdo DC 5,5/2,1 mm do obudowy (~20–25 zł). Wybieramy 4 A, nie 3 A, bo szczytowy pobór to ok. 2,3–3,3 A ([[13 Zasilanie i elektronika]]).
 - [ ] Włącznik zasilania
 - [ ] Bezpiecznik lub PTC ok. 5 A
-- [ ] Konwerter poziomów **74AHCT125** (dla diod WS2812B)
+- [ ] Dioda **1N4001** (1 A) szeregowo w zasilaniu pierścienia WS2812B: wtedy wystarcza sygnał 3,3 V, bez konwertera poziomów ([[13 Zasilanie i elektronika]])
 - [ ] Rezystory 10 kΩ, 3 szt. (linie sygnałowe serw do masy)
 - [ ] Kondensatory 100 µF i 100 nF (przy każdym serwie i każdym ESP32)
 - [ ] Płytka uniwersalna, przewody silikonowe AWG26–28, goldpiny
 - [ ] Złącze **JST-XH 4-pin** (para) do odłączanego pałąka
 
 **Mechanika**
-- [ ] Śruby **M2×18–20**, ok. 16 szt. (z zapasem)
+- [ ] Śruby **M2×18–20**, ok. 16 szt. (po 4 na nogę, z zapasowym zestawem). To osie przegubów.
 - [ ] Nakrętki M2 **samohamowne**, ok. 16 szt.
+- [ ] Śruby M2 **krótkie** (długość po zmierzeniu orczyka, ok. 8–12 mm), 8 szt., do przykręcenia adapterów do oryginalnych orczyków (po 2 na adapter)
+- [ ] Śruby do serw (M2,5 lub M3 zależnie od otworów w HS-422), 12 szt. (po 4 na serwo)
+- [ ] Zestaw M3 różnej długości (ok. 20–30 szt.) do składania bazy, konsoli i pałąka
 - [ ] **8× łącznik kulowy M3** (plan B, jeśli kostki Kardana się zaklinują, patrz [[07 Cięgna i przeguby]])
 - [ ] Cienkie podkładki M2
 - [ ] Wkładki gwintowane M3 (heat-set), kilka sztuk
 - [ ] Stopki gumowe, 4 szt.
 - [ ] Klej do folii, ewentualnie nożyk do jej docinania
+- [ ] Kabel USB-C do transmisji danych (do programowania płytki S3) i kabel do głównego ESP32
+- [ ] Koszulki termokurczliwe
 
 ## 🖨️ Do wydrukowania
 
@@ -86,10 +91,13 @@ Pełna lista plików z uwagami: [[16 Elementy do druku]].
 | Pozycja | Koszt |
 | :--- | ---: |
 | Tura A (zestaw kamery, piłeczki, folia) | 70–80 zł |
-| Tura B (interfejs, zasilanie, mechanika, dodatki) | 65–85 zł |
-| **Razem** | **ok. 140–160 zł** |
+| Tura B (interfejs, zasilanie, mechanika, dodatki) | 90–115 zł |
+| **Razem** | **ok. 160–190 zł** |
 
-W pierwszej wersji planu było 100–110 zł. Różnica to dodatki, których tamta lista nie zawierała (konwerter poziomów, łączniki kulowe, złącza, zapasowa taśma kamery, wkładki, stopki). Lepiej je kupić od razu niż dojeżdżać po jednej sztuce.
+W pierwszej wersji planu było 100–110 zł. Różnica to dodatki, których tamta lista nie zawierała (dioda dla LED, łączniki kulowe, złącza, zapasowa taśma kamery, wkładki, stopki, dodatkowe śruby). Lepiej je kupić od razu niż dojeżdżać po jednej sztuce.
+
+> [!info] Ceny są orientacyjne
+> To oszacowania, nie oferty. Część drobnicy (rezystory, kondensatory, przewody, śruby M3, goldpiny, koszulki) prawdopodobnie jest już w domu, wtedy realny koszt będzie bliżej dolnej granicy albo niższy. Liczby sprawdź na konkretnych ofertach. Dokładne ilości śrub potwierdzimy po CAD.
 
 ## ⚠️ Sprawdź przed zamówieniem
 

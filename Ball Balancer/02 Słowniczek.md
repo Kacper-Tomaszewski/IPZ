@@ -12,7 +12,7 @@ Krótkie wyjaśnienia słów, które padają w notatkach. Powrót: [[Projekt Bal
 
 ## Mechanika
 
-- **3-RRS** to nazwa układu: trzy "nogi", każda ma dwa obrotowe przeguby (R, R) i jeden kulowy (S). U nas serwo obraca orczyk (R), a przegub na końcu orczyka i przegub pod tacą pozwalają cięgnu się wychylać.
+- **3-RRS** to nazwa układu: trzy "nogi", każda ma dwa obrotowe przeguby (R, R) i jeden kulowy (S). U nas serwo obraca orczyk (R), a przeguby na końcach cięgna pozwalają mu się wychylać. Zamiast prawdziwych przegubów kulowych mamy kostki Kardana (patrz [[07 Cięgna i przeguby]]), które działają podobnie, ale mają ograniczenia.
 - **Orczyk** to ramię przykręcone do wałka serwa. U nas ma 24 mm i nazywamy jego długość $L_1$.
 - **Cięgno (popychacz)** to sztywny pręt łączący orczyk z tacą. Ma 60 mm (oś do osi) i długość $L_2$.
 - **Kostka Kardana (przegub krzyżakowy)** to mały sześcian z dwoma prostopadłymi osiami. Pozwala cięgnu wychylać się w dwóch kierunkach.

@@ -19,15 +19,15 @@ Lista wszystkich wydruków, ich stan (gotowe czy do zaprojektowania) i ustawieni
 
 | Plik | Szt. | Stan |
 | :--- | :--- | :--- |
-| `00_Kupon_Tolerancji.stl` | 1 | do zaprojektowania (prosty) |
-| `01_Baza_Glowna_HS422.stl` | 1 | do zaprojektowania |
-| `02_Panel_Konsoli_OLED.stl` | 1 | do zaprojektowania |
-| `03_Taca_Robocza_210mm.stl` + `03b_Rant_210mm.stl` | 1 + 1 | do zaprojektowania |
-| `04_Adapter_Orczyka_24mm.stl` | 4 | **gotowe**, kod w [[24 Kod OpenSCAD cięgien]] |
-| `05_Popychacz_60mm.stl` | 4 | **gotowe** |
-| `05b_Kostka_Kardana.stl` | 8 | **gotowe** |
-| `05c_Uchwyt_Pod_Tace.stl` | 4 | **gotowe** (do potwierdzenia `pivot_h`) |
-| `06_Palak_Dolny.stl` + `07_Palak_Gorny_Kamera.stl` | 1 + 1 | do zaprojektowania |
+| `00_Kupon_Tolerancji.stl` | 1 | **gotowe w Fusion** ([[26 Projekt Fusion 360]]) |
+| `01_Baza_Glowna_HS422.stl` | 1 | **gotowe w Fusion** ([[26 Projekt Fusion 360]]) |
+| `02_Panel_Konsoli_OLED.stl` | 1 | **gotowe w Fusion** ([[26 Projekt Fusion 360]]) |
+| `03_Taca_Robocza_210mm.stl` (z widełkami) + `03b_Rant_210mm.stl` | 1 + 1 | **gotowe w Fusion** ([[26 Projekt Fusion 360]]) |
+| `04_Adapter_Orczyka_24mm.stl` | 4 | **gotowe w Fusion** (widełki pochylone i poprawiona kolizja z cięgnem; wersja z [[24 Kod OpenSCAD cięgien]] do tego nie pasuje) |
+| `05_Popychacz_60mm.stl` | 4 | **gotowe** (Fusion lub OpenSCAD) |
+| `05b_Kostka_Kardana.stl` | 8 | **gotowe** (Fusion lub OpenSCAD) |
+| `05c_Uchwyt_Testowy.stl` | 1 | tylko do testu jednej nogi w Etapie 0; w komplecie widełki są częścią tacy |
+| `06_Palak_Dolny.stl` + `07_Palak_Gorny_Kamera.stl` | 1 + 1 | **gotowe w Fusion** ([[26 Projekt Fusion 360]]) |
 | Arkusz kalibracyjny (A4, papier) | 1 | do przygotowania |
 
 Liczby sztuk przy cięgnach to zestawy **po 4** (3 użyte + 1 zapasowy), a nie po 3 jak w pierwszej wersji. Powód: [[07 Cięgna i przeguby]].
@@ -36,10 +36,10 @@ Liczby sztuk przy cięgnach to zestawy **po 4** (3 użyte + 1 zapasowy), a nie p
 
 - **Baza główna.** Trzy ramiona z kieszeniami na serwa HS-422 (leżą na boku), komora na ESP32 i kondensator 1000 µF, gniazdo zasilania DC. Wkładki gwintowane M3 i stopki gumowe.
 - **Panel konsoli.** Przód nachylony 40°, miejsce na ekran OLED, krzyżak strzałek po lewej, pokrętło i DALEJ po prawej. Drukowany licem do stołu.
-- **Taca.** Płaska płyta 210 mm z 6 żebrami od spodu, drukowana górną płaszczyzną na gładkim stole. Rant jest osobnym pierścieniem doklejanym po założeniu folii.
+- **Taca.** Płaska płyta 210 mm z 6 żebrami i 3 widełkami od spodu, drukowana górną płaszczyzną na gładkim stole. Rant jest osobnym pierścieniem doklejanym po założeniu folii.
 - **Adapter orczyka.** Nakładka na oryginalny orczyk HS-422, mocowana dwiema śrubami M2, zakończona widełkami 24 mm od osi.
 - **Popychacz + kostki.** Bezluzowe cięgna z przegubami krzyżakowymi na śrubach M2.
-- **Uchwyt pod tacę.** Widełki przykręcane od spodu tacy w promieniu 90 mm, śruby M3 w rozstawie 20 mm.
+- **Widełki pod tacą.** Drukowane razem z tacą w promieniu 90 mm (bez śrub). Osobny uchwyt `05c` jest tylko do testu jednej nogi.
 - **Pałąk.** Dwuczęściowe ramię C-Arm z tunelem kablowym 8 × 8 mm, mocowaniem płytki S3-CAM, gniazdem pierścienia LED i regulacją wysokości głowicy ([[17 Taca, pałąk i baza]]).
 
 ## Ustawienia druku cięgien

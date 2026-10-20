@@ -39,11 +39,11 @@ $$M\approx m\cdot L_1\approx 0{,}05\text{ kg}\cdot2{,}4\text{ cm}=0{,}12\text{ k
 To jest ok. **25–30 razy mniej** niż 3,3 kg·cm. Dokładna masa zależy od wydruku (to oszacowanie), ale nawet dwukrotnie cięższa taca nie zmienia wniosku.
 
 > [!info] Czy SG90 by wystarczył?
-> SG90 (1,6 kg·cm) też by uniósł taką tacę. Zostawiamy go jako rezerwę, ale HS-422 ma mniejszy luz w przekładni i jest sztywniejszy, a dla precyzji ta cecha jest ważniejsza niż sam moment.
+> SG90 (1,6 kg·cm) też by uniósł taką tacę. Zostawiamy go jako rezerwę. HS-422 jest większy i zwykle ma mniejszy luz w przekładni niż SG90 (do potwierdzenia na własnych egzemplarzach), a dla precyzji luz jest ważniejszy niż sam moment.
 
 ## Prędkość
 
-Pasmo regulatora to ok. 0,4 Hz ([[11 Regulator PID]]). Przy amplitudzie przechyłu 10° wymagana prędkość serwa to ok. 25°/s. Serwo potrafi ok. 285°/s, więc ma 10-krotny zapas.
+Pasmo regulatora to ok. 2,6 rad/s, czyli 0,4 Hz ([[11 Regulator PID]]). W najgorszym razie orczyk wykonuje ruch o amplitudzie ok. 22° (przechył 6°, [[06 Kinematyka i zakres ruchu]]) z częstotliwością pasma, co daje prędkość szczytową $22^\circ\cdot2{,}6\approx57^\circ$/s. Serwo potrafi ok. 285°/s, więc zapas to ok. 5-krotny. W normalnej pracy (przechyły 1–4°) jest znacznie większy.
 
 ## Opóźnienie serwa a regulacja
 

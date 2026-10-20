@@ -55,13 +55,16 @@ $$r_{mm}=H\tan\!\left(\frac{r_{px}}{f_{px}}\right),\qquad x_{mm}=(x-x_c)\frac{r_
 
 gdzie $(x_c,y_c)$ to środek obrazu, $r_{px}$ to odległość od środka w pikselach. $f_{px}$ i środek wyznacza kalibracja ([[18 Kalibracja i uruchomienie]]).
 
+> [!tip] Plan awaryjny, jeśli model nie pasuje
+> Prawdziwy obiektyw może odbiegać od modelu równoodległego. Jeśli po kalibracji okręgi z arkusza nie zgadzają się z modelem (błąd większy niż ok. 1 mm), zamiast wzoru z tangensem używamy prostego wielomianu $r_{mm}=c_1\,r_{px}+c_3\,r_{px}^3$, którego dwa współczynniki dopasowujemy metodą najmniejszych kwadratów do czterech znanych okręgów arkusza (25, 50, 75, 100 mm). Jest też tańszy w obliczeniach, bo nie wymaga tangensa.
+
 ### Dokładność w praktyce
 
 Kulka ma średnicę 40 mm, czyli ok. 17 px. Środek liczymy jako **średnią ważoną jasnością** (centroid subpikselowy), co daje dokładność rzędu 0,2–0,3 piksela, czyli około **±0,5–0,8 mm**. Do balansowania to wystarcza, ale pozycji **nie wolno** różniczkować wprost, bo pochodna z takiego szumu jest bezużyteczna. Dlatego prędkość liczy filtr α-β ([[11 Regulator PID]]).
 
 ## Wysokość kamery
 
-Czy lepiej obniżyć kamerę? Policzone dla QQVGA, przechyłu 6° i krawędzi kulki na promieniu ok. 105 mm:
+Czy lepiej obniżyć kamerę? Policzone dla QQVGA, przechyłu 6° (krawędź tacy jest wtedy bliżej kamery, dlatego skala na brzegu jest nieco mniejsza niż 2,6 mm/px z wyliczenia dla płaskiej tacy) i krawędzi kulki na promieniu ok. 105 mm:
 
 | Wysokość $H$ | mm/px w środku | mm/px na brzegu | Zapas kąta do krawędzi kadru |
 | :--- | ---: | ---: | ---: |

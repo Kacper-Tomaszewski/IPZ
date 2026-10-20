@@ -1,0 +1,10 @@
+{
+	"autodeskProduct":	"Fusion360",
+	"type":	"script",
+	"author":	"Kacper Tomaszewski",
+	"description":	{
+		"":	"Ball Balancer 3-RRS: model, kinematyka odwrotna, test kolizji, eksport STL"
+	},
+	"supportedOS":	"windows|mac",
+	"editEnabled":	true
+}

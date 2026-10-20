@@ -56,7 +56,7 @@ Potrzebujemy dwóch pinów na UART (TX, RX) i jednego na dane diod LED:
 | :--- | :--- | :--- |
 | UART TX (do bazy) | wolny GPIO | Do RX bazy (GPIO 16) |
 | UART RX (z bazy) | wolny GPIO | Do TX bazy (GPIO 17) |
-| Dane WS2812B | wolny GPIO | Przez konwerter poziomów 74AHCT125 |
+| Dane WS2812B | wolny GPIO | Wprost; pierścień zasilany przez diodę 1N4001 ([[13 Zasilanie i elektronika]]) |
 
 ## Połączenia między płytkami (przez złącze pałąka)
 

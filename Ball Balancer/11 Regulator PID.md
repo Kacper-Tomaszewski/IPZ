@@ -11,6 +11,9 @@ created: 2026-10-20
 
 Poprzednia: [[10 Dynamika kulki]]. Dalej: [[12 Trajektorie]]. Powrót: [[Projekt Ball Balancer]]. Kod: [[22 Firmware - Sterowanie]].
 
+> [!note] Dla torów regulator ma dodatkowe wejścia
+> Ta notatka opisuje regulator dla **stałego punktu**. Gdy kulka ma jeździć po torze, dochodzą prędkość i przyspieszenie z generatora, a sam PID nie wystarcza (błąd ok. 44 mm na okręgu 60 mm przy 1,5 rad/s). Pełny wzór: [[12 Trajektorie]].
+
 ## W skrócie
 
 Regulator przelicza błąd ("gdzie kulka jest" − "gdzie ma być") na przechył tacy. Nastawy, które policzyłem, są **celowo powolne** (pasmo ok. 0,4 Hz). Powód: kamera i serwo mają opóźnienia i szybszy regulator zacząłby oscylować. Poniżej pokazuję, jak do tego doszedłem.

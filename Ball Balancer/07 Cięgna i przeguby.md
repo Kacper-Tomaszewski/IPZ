@@ -28,10 +28,10 @@ W przegubie kulowym cięgno może się obracać dowolnie. Przegub krzyżakowy po
 | :--- | ---: | ---: | ---: | ---: |
 | Skręt cięgna | 0,8° | 1,6° | 2,4° | 3,2° |
 
-Dla cięgna 54 mm skręt 3° to ok. 0,4 mm przesunięcia bocznego na końcu. Cały luz kostki w widełkach (szczelina 8,4 mm − kostka 8,0 mm) to też 0,4 mm.
+Co to znaczy w milimetrach: widełki mają 14 mm szerokości, więc skręt 3° przesuwa ich skraj o ok. $7\cdot\sin3^\circ\approx0{,}4$ mm. Cały luz kostki w widełkach (szczelina 8,4 mm − kostka 8,0 mm) to też 0,4 mm.
 
 > [!success] Co z tego wynika
-> - Do **4°** wystarczy sprężystość i luz wydruku. Cięgno się nie klinuje.
+> - Do **4°** (skręt 1,6°, ok. 0,2 mm) powinna wystarczyć sprężystość i luz wydruku. To oszacowanie, sprawdzamy je w teście poniżej.
 > - Przy **8°** skręt zjada cały luz i konstrukcja zacznie się zacierać albo pracować z tarciem.
 > - Dlatego przyjęliśmy **limit ±6°** ([[06 Kinematyka i zakres ruchu]]) oraz test przed drukiem całości.
 
@@ -41,7 +41,7 @@ Luz kostki 0,4 mm daje błąd przechyłu rzędu 0,2–0,4° (oszacowanie). Przy 
 
 ## Test i plan B
 
-1. **Wydrukuj jeden zestaw** (cięgno + 2 kostki + adapter + uchwyt) i złóż ręcznie z serwem.
+1. **Wydrukuj jeden zestaw** (cięgno + 2 kostki + adapter + uchwyt testowy `05c`) i złóż ręcznie z serwem.
 2. Poruszaj orczykiem w całym zakresie ±35° i przechylaj uchwyt ręką. Ma chodzić płynnie, bez zacierania.
 3. Zmierz luz. Cel: $\le0{,}3$ mm.
    - Zbyt luźno: zmniejsz `fork_gap` w kodzie z 8,4 na 8,2 mm.

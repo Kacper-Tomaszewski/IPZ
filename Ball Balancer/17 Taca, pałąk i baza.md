@@ -51,7 +51,7 @@ Słupek stoi 132 mm od środka, a krawędź tacy sięga 105 mm (plus rant 2 mm),
 - **Wkładki gwintowane M3 (heat-set).** Wciskane lutownicą, dają gwint, który nie wyrabia się po wielokrotnym skręcaniu (PLA bez wkładek wyrabia gwint po kilku razach).
 - **Kieszenie serw** 41,0 × 20,2 mm. Po wydruku sprawdź, czy serwo wchodzi bez siłowania, ale też bez luzu.
 - **Orczyk.** Adapter mocuje się dwiema śrubami M2 do oryginalnego orczyka na promieniach 8,0 i 12,5 mm od osi. **Zmierz suwmiarką rzeczywiste otwory** przed finalnym CAD.
-- **Komora na elektronikę.** ESP32, kondensator 1000 µF, konwerter poziomów, rezystory 10 kΩ, gniazdo zasilania i włącznik.
+- **Komora na elektronikę.** ESP32, kondensator 1000 µF, rezystory 10 kΩ, gniazdo zasilania i włącznik.
 - **Kabel do pałąka** wchodzi przez złącze JST, a nie jest wlutowany na stałe.
 
 ## Co sprawdzić w CAD

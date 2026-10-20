@@ -124,12 +124,15 @@ struct Pid {
   float kp = 0.0229f, kd = 0.0229f, ki = 0.0015f;  // [st/mm], [st*s/mm], [st/(mm*s)]
   float iLimit = 1.5f;                              // [stopnie]
   float integ = 0;
-  float step(float setpoint, float pos, float vel, float T, float outLimit) {
-    const float e = setpoint - pos;
-    integ += ki * e * T;
-    integ  = constrain(integ, -iLimit, iLimit);
-    const float u = kp * e - kd * vel + integ;      // pochodna z pomiaru
-    return constrain(u, -outLimit, outLimit);       // outLimit = 6 stopni
+  // pRef, vRef: polozenie i predkosc zadana [mm, mm/s]; dla stalego punktu vRef = 0
+  // ffDeg: przechyl z feed-forward [stopnie]; dla stalego punktu 0
+  // freeze: true zamraza calke (nasycenie wyjscia, kulka zgubiona)
+  float step(float pRef, float vRef, float ffDeg,
+             float pos, float vel, float T, float outLimit, bool freeze = false) {
+    const float e = pRef - pos;
+    if (!freeze) integ = constrain(integ + ki * e * T, -iLimit, iLimit);
+    const float u = kp * e + kd * (vRef - vel) + integ + ffDeg;  // vel z filtra alfa-beta
+    return constrain(u, -outLimit, outLimit);                    // outLimit = 6 stopni
   }
 };
 ```
@@ -141,7 +144,9 @@ struct Pid {
 4. Kinematyka odwrotna → kąty serw.
 5. Kąty → mikrosekundy → LEDC.
 
-**Anty-windup:** całka jest zamrażana, gdy wyjście jest nasycone lub kulka zgubiona.
+**Tory:** dla stałego punktu wołamy `step(pRef, 0, 0, ...)`. Dla trajektorii generator podaje `pRef`, `vRef` i kąt feed-forward `ffDeg`. Kod generatora jest w [[25 Firmware - Generator trajektorii]], a teoria w [[12 Trajektorie]].
+
+**Anty-windup:** parametr `freeze` zamraża całkę, gdy wyjście jest nasycone lub kulka zgubiona.
 
 **Auto-trim:** gdy kulka jest w odległości $<5$ mm od środka z prędkością $<5$ mm/s przez 10 s, bieżąca wartość całki zostaje zapamiętana jako poprawka (`trimX`, `trimY`), a całka zerowana. Zapis do NVS po potwierdzeniu w UI.
 

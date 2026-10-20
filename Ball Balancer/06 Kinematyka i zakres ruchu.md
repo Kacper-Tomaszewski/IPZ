@@ -50,7 +50,7 @@ Przechył w stronę serwa 1 (tył), taca na wysokości neutralnej:
 | :--- | ---: | ---: |
 | 3° | +11,0° | −5,7° |
 | 5° | +18,2° | −9,7° |
-| 6° | ok. +22° | ok. −12° |
+| 6° | +21,7° | −11,7° |
 | 7° | +25,4° | −13,8° |
 | 9° | +32,7° | −18,0° |
 | 10° | +36,5° (poza limitem) | −20,2° |
@@ -65,9 +65,8 @@ Intuicyjnie: nogi leżą na okręgu o promieniu $R$, więc przechył $\theta$ w 
 
 > [!success] Dlaczego ±6°, a nie pełne 8–10°
 > 1. **Wystarcza do balansowania.** Piłeczka z przyspieszeniem $a=5{,}89\sin\theta$ m/s² przy 6° ma już prawie 0,6 m/s². Typowa praca to 1–4° ([[10 Dynamika kulki]]).
-> 2. **Zostaje zapas serwa.** 6° zużywa ok. 22° z 35°, a pozostałe ok. 13° przydaje się na trym, wypoziomowanie i luzy.
+> 2. **Zostaje zapas serwa.** Przy 6° orczyk potrzebuje do 22° (przechył w stronę jednego serwa), a w najgorszym kierunku do 25°. Z dostępnych 35° zostaje ok. 10–13° na trym, wypoziomowanie i luzy.
 > 3. **Przeguby pracują łagodniej.** Przy 6° cięgna muszą się skręcić tylko o ok. 2,4° ([[07 Cięgna i przeguby]]), a przy 8° o 3,2°, czyli tyle, ile wynosi cały luz kostki.
-> 4. **Lepsza widoczność kulki.** Mniejszy przechył to mniej odchylonej tacy względem kamery.
 
 ## Rozdzielczość
 

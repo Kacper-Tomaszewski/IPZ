@@ -59,4 +59,6 @@ Kamera patrząca prosto w dół widzi całą tacę i pozycja kulki to po prostu 
 4. Po utracie kamery lub kulki taca spokojnie się poziomuje, a po restarcie wracają zapisane nastawy.
 5. Całość działa z jednego zasilacza 5 V, bez PC.
 
+Kryterium 3 wymaga feed-forward i zmierzonego $K$ kulki (błąd modelu o 20% już zbliża nas do 10 mm), więc w razie potrzeby wolniejszy tor (1,0 rad/s) jest uczciwym planem awaryjnym ([[12 Trajektorie]]).
+
 Te kryteria mierzymy na końcu w [[19 Plan prac i testy]].

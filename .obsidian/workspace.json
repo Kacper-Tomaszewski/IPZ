@@ -13,25 +13,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Ball Balancer/16 Elementy do druku.md",
+                "file": "Ball Balancer/04 Decyzje i uzasadnienia.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "16 Elementy do druku"
+              "title": "04 Decyzje i uzasadnienia"
             }
           },
           {
             "id": "b2d1420630f66315",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Podgląd grafu"
+              "type": "markdown",
+              "state": {
+                "file": "Ball Balancer/05 Geometria i wymiary.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "05 Geometria i wymiary"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -186,8 +191,8 @@
             "state": {
               "type": "copilot-agent-chat-view",
               "state": {},
-              "icon": "copilot-agent",
-              "title": "Copilot Agent"
+              "icon": "lucide-ghost",
+              "title": "copilot-agent-chat-view"
             }
           }
         ],
@@ -206,47 +211,46 @@
       "daily-notes:Otwórz dzisiejszy dziennik": false,
       "templates:Wstaw szablon": false,
       "command-palette:Otwórz paletę poleceń": false,
-      "bases:Stwórz nową bazę danych": false,
-      "copilot:Open Copilot Agent Chat": false
+      "bases:Stwórz nową bazę danych": false
     }
   },
-  "active": "f116a211eae8ce00",
+  "active": "b2d1420630f66315",
   "lastOpenFiles": [
+    "Ball Balancer/04 Decyzje i uzasadnienia.md",
+    "Ball Balancer/08 Serwa i momenty.md",
+    "Projekt Ball Balancer.md.tmp.26188.d88d4a3fd29b",
+    "Projekt Ball Balancer.md.tmp.26188.d309800a6571",
+    "Ball Balancer/26 Projekt Fusion 360.md.tmp.26188.88df1f82c804",
+    "Ball Balancer/26 Projekt Fusion 360.md",
+    "Ball Balancer/zalaczniki/26_fusion_render.png",
+    "Ball Balancer/zalaczniki",
+    "cad/fusion/BallBalancer/BallBalancer.manifest",
+    "cad/fusion/BallBalancer/BallBalancer.py",
+    "cad/fusion/BallBalancer/bb_geom.py",
+    "cad/fusion/BallBalancer/__pycache__/bb_params.cpython-313.pyc",
+    "cad/fusion/BallBalancer/__pycache__/bb_kin.cpython-313.pyc",
+    "cad/fusion/BallBalancer/__pycache__",
     "Ball Balancer/07 Cięgna i przeguby.md",
     "Ball Balancer/06 Kinematyka i zakres ruchu.md",
+    "Ball Balancer/05 Geometria i wymiary.md",
+    "Ball Balancer/02 Słowniczek.md",
+    "Ball Balancer/11 Regulator PID.md",
+    "Ball Balancer/19 Plan prac i testy.md",
+    "Ball Balancer/25 Firmware - Generator trajektorii.md",
     "Projekt Ball Balancer.md",
-    "Ball Balancer/24 Kod OpenSCAD cięgien.md.tmp.6648.3706c0c299f4",
+    "Ball Balancer/09 Kamera i wizja.md",
+    "Ball Balancer/12 Trajektorie.md",
+    "Ball Balancer/13 Zasilanie i elektronika.md",
+    "Ball Balancer/16 Elementy do druku.md",
     "Ball Balancer - Obliczenia.md",
-    "Projekt Ball Balancer.md.tmp.6648.b1723dd13e4b",
     "Ball Balancer/24 Kod OpenSCAD cięgien.md",
-    "Ball Balancer/04 Decyzje i uzasadnienia.md",
     "Ball Balancer/18 Kalibracja i uruchomienie.md",
     "Ball Balancer/23 Firmware - Narzędzia i struktura.md",
     "Ball Balancer/22 Firmware - Sterowanie.md",
     "Ball Balancer/21 Firmware - Kamera.md",
     "Ball Balancer/20 Firmware - Protokół UART.md",
     "Ball Balancer/17 Taca, pałąk i baza.md",
-    "Ball Balancer/19 Plan prac i testy.md",
-    "Ball Balancer/09 Kamera i wizja.md",
-    "Ball Balancer/16 Elementy do druku.md",
-    "Ball Balancer/05 Geometria i wymiary.md",
     "Ball Balancer/03 Lista rzeczy do projektu.md",
-    "Ball Balancer/02 Słowniczek.md",
-    "Ball Balancer/01 Jak to działa.md",
-    "Ball Balancer/15 Konsola i obsługa.md",
-    "Ball Balancer/14 Pinout i połączenia.md",
-    "Ball Balancer/13 Zasilanie i elektronika.md",
-    "Ball Balancer/13 Zasilanie i elektronika.md.tmp.6648.1b15b30c8ec5",
-    "Ball Balancer - Uwagi i ulepszenia.md",
-    "Ball Balancer/12 Trajektorie.md",
-    "Ball Balancer/11 Regulator PID.md",
-    "Ball Balancer/10 Dynamika kulki.md",
-    "Ball Balancer",
-    "sedZAAlb9",
-    "Ball Balancer - Firmware.md.tmp.30140.9d4184c13b51",
-    "Ball Balancer - Uwagi i ulepszenia.md.tmp.30140.996d589157cd",
-    "Ball Balancer - Uwagi i ulepszenia.md.tmp.30140.0cd6d047db65",
-    "Ball Balancer - Uwagi i ulepszenia.md.tmp.30140.c4c00e8e838b",
-    "Projekt Ball Balancer.md.tmp.30140.2ebea6b39308"
+    "Ball Balancer/01 Jak to działa.md"
   ]
 }

@@ -32,7 +32,7 @@ Płytka ESP32-S3 z kamerą robi wyłącznie to, co do niej należy: bierze obraz
 9. **Pierścień LED.**
    - Światło białe, jasność ok. 25%, stałe w trakcie pomiaru.
    - Status kolorem w osobnych przerwach lub na dedykowanych diodach: zielony = kulka widoczna, żółty = brak, czerwony = błąd.
-   - Dane przez konwerter poziomów 74AHCT125 ([[13 Zasilanie i elektronika]]).
+   - Dane wprost z GPIO; pierścień zasilany przez diodę 1N4001 ([[13 Zasilanie i elektronika]]).
 
 ## Czego mierzymy w Etapie 1
 

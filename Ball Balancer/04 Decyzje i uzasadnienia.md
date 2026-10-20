@@ -35,6 +35,8 @@ Tu zebrane są wszystkie ważne wybory w projekcie, każdy z krótkim „dlaczeg
 | Wysokość kamery | 195 mm, stała | 195 mm, **regulowana 170–210 mm** | Obniżenie dałoby ok. 10% w skali, ale grozi wypadnięciem kulki z kadru | [[09 Kamera i wizja]] |
 | Sztywność pałąka | nieomawiana | Grubsze ścianki, wzmocnienie prętem | Drżenie pałąka wygląda jak ruch kulki | [[17 Taca, pałąk i baza]] |
 | Baza | bez uwag | Stopki, wkładki heat-set | Baza nie może wędrować | [[17 Taca, pałąk i baza]] |
+| Uchwyty pod tacą | 3 osobne, przykręcane M3 | **Widełki drukowane razem z tacą** | 3 wydruki, 6 śrub i 6 nakrętek mniej; promień 90 mm i wysokość osi wynikają z jednego wydruku, bez błędu montażu. Złamane widełki = nowa taca | [[26 Projekt Fusion 360]] |
+| Widełki orczyka i tacy | sworzeń pionowy / poziomy | **Sworzeń prostopadły do cięgna (pochylony o 23,6°)** | Kostki leżą na osi cięgna, więc $L_2=60$ mm i góra tacy 96,5 mm są dokładne | [[26 Projekt Fusion 360]] |
 
 ## Kamera i wizja
 
@@ -55,7 +57,10 @@ Tu zebrane są wszystkie ważne wybory w projekcie, każdy z krótkim „dlaczeg
 | Prędkość | Różnica pozycji | **Filtr α-β** | Różnicowanie szumu jest bezużyteczne | [[11 Regulator PID]] |
 | Częstotliwość pętli | z kamerą (50–60 Hz) | **Stałe 50 Hz** | Serwo analogowe odświeża się co 20 ms | [[08 Serwa i momenty]] |
 | Ramka UART | 5 B | **9 B z sumą** | Wykrywanie błędów i zgubionych ramek | [[20 Firmware - Protokół UART]] |
-| Trajektorie | brak ograniczeń | $\omega\le1{,}5$ rad/s na początek | Pasmo pętli ok. 2,6 rad/s | [[12 Trajektorie]] |
+| Sterowanie po torze | tylko "feed-forward" jako pomysł | **Feed-forward obowiązkowy**, z wyprzedzeniem 0,1 s i współczynnikiem $k_{ff}$ | Sam PID dałby ok. 44 mm błędu na okręgu 60 mm przy 1,5 rad/s | [[12 Trajektorie]] |
+| Limity toru | brak | **Przechył 3° na ff + 3° na regulator; najwyższa składowa ≤ 1,5 rad/s; wychylenie ≤ 70 mm** | Dwa niezależne ograniczenia (fizyka i pasmo pętli) | [[12 Trajektorie]] |
+| Zmiana punktu i start toru | skok | **Płynny profil (minimum jerk), narastanie $\omega$** | Skoki szarpią tacą i pobudzają luzy | [[12 Trajektorie]] |
+| Pomiar $K$ kulki | z teorii | **Zmierzony na tacy** | Dokładność $K$ decyduje o błędzie śledzenia | [[18 Kalibracja i uruchomienie]] |
 | Poziomowanie | ręczne | **Auto-trim** | Mniej ręcznej pracy | [[18 Kalibracja i uruchomienie]] |
 
 ## Elektronika
@@ -65,7 +70,7 @@ Tu zebrane są wszystkie ważne wybory w projekcie, każdy z krótkim „dlaczeg
 | Zasilacz | 5 V, 3 A (lub 4 A) | **5 V / 4 A** | Szczyt poboru 2,3–3,3 A | [[13 Zasilanie i elektronika]] |
 | Napięcie serw | nieokreślone | **5 V** | Zapas momentu jest ogromny | [[08 Serwa i momenty]] |
 | Enkoder KY-040 | nieokreślone | **zasilany z 3,3 V** | Moduł ma pull-upy do VCC | [[13 Zasilanie i elektronika]] |
-| Dane WS2812B | wprost | **przez 74AHCT125** | Za niski poziom logiczny z 3,3 V | [[13 Zasilanie i elektronika]] |
+| Dane WS2812B | wprost | **wprost, pierścień zasilany przez diodę 1N4001** (wcześniej 74AHCT125) | Przy ok. 4,25 V na pierścieniu próg „1” to ok. 3,0 V, więc 3,3 V wystarcza. Jeden element zamiast układu scalonego | [[13 Zasilanie i elektronika]] |
 | Piny serw przy starcie | bez zabezpieczeń | **Rezystory 10 kΩ + rampa** | Pływające piny szarpią serwami | [[13 Zasilanie i elektronika]] |
 | Okablowanie pałąka | nieokreślone | **JST-XH 4-pin, skręcona para** | Odłączalny pałąk, mniej zakłóceń | [[13 Zasilanie i elektronika]] |
 | Ekran kalibracji | brak | **Ekran 5** | Kalibracja bez komputera | [[15 Konsola i obsługa]] |
@@ -76,7 +81,7 @@ Tu zebrane są wszystkie ważne wybory w projekcie, każdy z krótkim „dlaczeg
 | :--- | :--- | :--- | :--- | :--- |
 | Kolejność | zakupy → CAD → druk | **walidacja → test wizji → reszta** | Najpierw sprawdzamy największe ryzyka | [[19 Plan prac i testy]] |
 | Narzędzia kodu | dowolne | **PlatformIO, wspólny protocol.h, params.scad** | Spójność i powtarzalność | [[23 Firmware - Narzędzia i struktura]] |
-| Budżet | 100–110 zł | **140–160 zł** | Dodatki, których brakowało | [[03 Lista rzeczy do projektu]] |
+| Budżet | 100–110 zł | **160–190 zł** (orientacyjnie) | Dodatki, których brakowało | [[03 Lista rzeczy do projektu]] |
 
 ## Czego świadomie nie robimy
 

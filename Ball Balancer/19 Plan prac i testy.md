@@ -36,26 +36,27 @@ Każdy etap ma **kryterium przejścia dalej**. Nie przechodzimy do następnego, 
 
 - [ ] **Etap 4: druk i montaż mechaniki.** Kolejność: baza + serwa + cięgna → taca → pałąk → konsola. Po każdym kroku sprawdź ruch ręką.
 
-- [ ] **Etap 5: elektronika na biurku.** Zasilanie 5 V w gwiazdę, kondensatory, konwerter poziomów dla LED, skręcona para UART, złącze JST ([[13 Zasilanie i elektronika]]). Zmierz prądy.
+- [ ] **Etap 5: elektronika na biurku.** Zasilanie 5 V w gwiazdę, kondensatory, dioda 1N4001 w zasilaniu pierścienia LED, skręcona para UART, złącze JST ([[13 Zasilanie i elektronika]]). Zmierz prądy.
 
 - [ ] **Etap 6: firmware** w kolejności: kinematyka + serwa → UI + NVS → kamera → UART → pętla PID ([[22 Firmware - Sterowanie]]).
 
-- [ ] **Etap 7: integracja i strojenie.** Kalibracje, potem strojenie według procedury z [[11 Regulator PID]]. Mierz kryteria sukcesu.
+- [ ] **Etap 7: integracja i strojenie.** Kalibracje (w tym pomiar $K$, [[18 Kalibracja i uruchomienie]]), potem strojenie według procedury z [[11 Regulator PID]], na końcu tory według testów z [[12 Trajektorie]]. Mierz kryteria sukcesu.
 
 - [ ] **Etap 8: wykończenie.** Folia, rant, okablowanie w tunelu, dyfuzor LED, etykiety.
 
 ## Ryzyka i jak je sprawdzamy
 
-| Ryzyko | Kiedy sprawdzamy | Co robimy, jeśli się sprawdzi |
-| :--- | :--- | :--- |
-| Cięgna Kardana klinują lub mają zbyt duży luz | Etap 0 | Poprawka tolerancji; łączniki kulowe M3 |
-| Kamera 120° nie daje dokładności | Etap 1 | QVGA; zmiana wysokości; obiektyw ok. 90° |
-| Moduł S3 i taśma FPC nie pasują | Przy zamówieniu | Sprawdź opis oferty i zdjęcia gniazda |
-| Główne ESP32 to WROVER | Przed lutowaniem | Zmień piny UART (GPIO 16/17 odpadają) |
-| Zasilacz za słaby lub zakłócenia | Etap 5 | Dodaj kondensatory; wymień zasilacz |
-| Za duże opóźnienia, regulator oscyluje | Etap 7 | Zmniejsz $K_p$; rozważ serwa cyfrowe |
-| Taca się wygina | Po wydruku | Grubsza płyta (4 mm), brim, inny podkład |
-| Drgania pałąka | Etap 4–7 | Wzmocnienie prętem, grubsze ścianki |
+| Ryzyko                                        | Kiedy sprawdzamy | Co robimy, jeśli się sprawdzi            |
+| :-------------------------------------------- | :--------------- | :--------------------------------------- |
+| Cięgna Kardana klinują lub mają zbyt duży luz | Etap 0           | Poprawka tolerancji; łączniki kulowe M3  |
+| Kamera 120° nie daje dokładności              | Etap 1           | QVGA; zmiana wysokości; obiektyw ok. 90° |
+| Moduł S3 i taśma FPC nie pasują               | Przy zamówieniu  | Sprawdź opis oferty i zdjęcia gniazda    |
+| Główne ESP32 to WROVER                        | Przed lutowaniem | Zmień piny UART (GPIO 16/17 odpadają)    |
+| Zasilacz za słaby lub zakłócenia              | Etap 5           | Dodaj kondensatory; wymień zasilacz      |
+| Za duże opóźnienia, regulator oscyluje        | Etap 7           | Zmniejsz $K_p$; rozważ serwa cyfrowe     |
+| Taca się wygina                               | Po wydruku       | Grubsza płyta (4 mm), brim, inny podkład |
+| Drgania pałąka                                | Etap 4–7         | Wzmocnienie prętem, grubsze ścianki      |
+| Błąd na torze > 10 mm przy 1,5 rad/s          | Etap 7           | Zmierz $K$, dostrój $k_{ff}$ i $t_{lead}$; zejdź do 1,0 rad/s ([[12 Trajektorie]]) |
 
 ## Kryteria sukcesu (na koniec)
 

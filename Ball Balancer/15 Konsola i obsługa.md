@@ -31,7 +31,7 @@ Konsola to panel z ekranem OLED, czterema strzałkami, przyciskiem DALEJ i pokr�
 | Ekran | Co pokazuje | Co robimy |
 | :--- | :--- | :--- |
 | **1. Radar** | Mapa tacy z punktem kulki i punktem zadanym, FPS, status | Strzałkami przesuwamy punkt zadany |
-| **2. Trajektorie** | Rodzaj toru (stop, okrąg, ósemka, kwadrat), promień, prędkość | Pokrętłem zmieniamy promień i prędkość |
+| **2. Trajektorie** | Rodzaj toru (stop, okrąg, ósemka, kwadrat), rozmiar, okres okrążenia, kierunek, $k_{ff}$, $t_{lead}$ | Strzałki wybierają parametr, pokrętło zmienia wartość. Menu samo przycina do limitów toru ([[12 Trajektorie]]) |
 | **3. PID** | $K_p$, $K_d$, $K_i$, profil kulki | Pokrętłem zmieniamy wartość, strzałkami wybieramy parametr |
 | **4. Trim serw** | Offset i kierunek dla 3 serw, poziomowanie | Strzałki + pokrętło |
 | **5. Kalibracja kamery** | Środek obrazu, skala, obrót/odbicie osi, próg | Strzałki + pokrętło |

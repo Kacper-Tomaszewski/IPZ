@@ -18,6 +18,7 @@ Powrót: [[Projekt Ball Balancer]]. Opis części: [[16 Elementy do druku]], [[0
 > [!warning] Przed drukiem całości (decyzje v2)
 > - Najpierw wydrukuj **jeden zestaw** i sprawdź płynność ruchu w całym zakresie $\pm35^\circ$ orczyka oraz luz (cel $\le 0{,}3$ mm). Przy zbyt dużym luzu zmniejsz `fork_gap` do 8,2 mm. Dla zbyt ciasnych sworzni zwiększ `m2_hole` do 2,15 mm.
 > - `plate_mount_bracket`: `pivot_h = 10.5` oznacza górną powierzchnię tacy na ok. **96,5 mm** (nie 92). Potwierdź po obróceniu uchwytu pod tacę. Patrz [[05 Geometria i wymiary]].
+> - W projekcie Fusion ([[26 Projekt Fusion 360]]) widełki uchwytu są **wbudowane w tacę**; `plate_mount_bracket` służy już tylko do testu jednej nogi.
 > - Używaj śrub **M2×18–20** i nakrętek samohamownych (nie M2×16).
 > - Zmierz rzeczywiste otwory w oryginalnym orczyku HS-422 (adapter zakłada 8,0 i 12,5 mm od osi).
 > - Plan B przy klinowaniu: łączniki kulowe M3 w miejscu górnych kostek.

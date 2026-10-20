@@ -49,7 +49,7 @@ Serwa analogowe w czasie ruchu ciągną krótkie szczyty prądu, które zapadaj�
 | Element | Problem | Rozwiązanie |
 | :--- | :--- | :--- |
 | **Enkoder KY-040** | Moduł ma rezystory podciągające do pinu `+`. Zasilany z 5 V podawałby 5 V na wejścia ESP32 (3,3 V) | Zasilaj moduł z **3,3 V** |
-| **Pierścień WS2812B** | Przy zasilaniu 5 V wymaga logicznej „1" co najmniej $0{,}7\cdot5=3{,}5$ V, a ESP32-S3 daje 3,3 V. Działa „czasem" | Konwerter poziomów **74AHCT125** albo dioda szeregowo w zasilaniu pierścienia (ok. 4,3 V) |
+| **Pierścień WS2812B** | Przy zasilaniu 5 V wymaga logicznej „1" co najmniej $0{,}7\cdot5=3{,}5$ V, a ESP32-S3 daje 3,3 V. Działa „czasem" | Dioda **1N4001** szeregowo w zasilaniu pierścienia: ok. 4,25 V, próg „1” ok. 3,0 V, więc 3,3 V wystarcza (bez konwertera poziomów) |
 | **UART kamera ↔ baza** | Oba układy 3,3 V | Bez konwersji, tylko wspólna masa |
 
 ## Start i bezpieczeństwo

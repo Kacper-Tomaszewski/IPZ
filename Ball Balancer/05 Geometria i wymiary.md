@@ -23,7 +23,7 @@ Wszystkie wymiary konstrukcji w jednym miejscu, razem z obliczeniami, które pok
 | | Średnica robocza | 206 mm | W środku rantu |
 | | Rant | 2,0 mm szer., 3,5 mm wys. | Drukowany osobno, doklejany po założeniu folii |
 | | Płyta + żebra | 3 mm + 5 mm | 6 żeber promieniowych od spodu, wypełnienie Gyroid 15% |
-| | Promień punktów podparcia $R_{plate}$ | 90 mm | 3 uchwyty M3, co 120° |
+| | Promień punktów podparcia $R_{plate}$ | 90 mm | 3 widełki drukowane razem z tacą, co 120° ([[26 Projekt Fusion 360]]) |
 | **Baza i serwa** | Promień osi serw $R_{base}$ | 90 mm | Osie serw dokładnie pod uchwytami tacy |
 | | Kieszeń na serwo HS-422 | 41,0 × 20,2 mm | Korpus 40,6 × 19,8 mm + 0,4 mm tolerancji druku |
 | | Rozstaw śrub serwa | 48,5 × 10,0 mm | 4 otwory ⌀2,5 mm |
@@ -65,7 +65,7 @@ W pierwszej wersji przyjęto górę tacy na 92 mm, czyli 9 mm nad osią przegubu
 $$Z_{top}=83{,}0+10{,}5+3{,}0=96{,}5\text{ mm}$$
 
 > [!success] Dlaczego nie zmniejszamy `pivot_h`, żeby wrócić do 92 mm
-> Kostka Kardana ma 10 mm wysokości i musi się zmieścić w widełkach uchwytu. Przy `pivot_h` około 6 mm zahaczałaby o podstawę uchwytu. Łatwiej zmienić jedną liczbę w planie (wysokość tacy) niż przerabiać gotowy, sprawdzony kształt uchwytu.
+> Kostka Kardana ma 10 mm wysokości i musi się zmieścić w widełkach uchwytu. Przy `pivot_h` około 6 mm zahaczałaby o podstawę uchwytu. Łatwiej zmienić jedną liczbę w planie (wysokość tacy) niż przerabiać gotowy kształt uchwytu.
 >
 > To jest wartość **nominalna, do potwierdzenia w CAD** po obróceniu uchwytu pod tacę. Od niej liczymy wysokość pałąka. Kamera ma być regulowana, więc ewentualne różnice kilku milimetrów nie zepsują projektu.
 
@@ -102,6 +102,6 @@ Do sprawdzenia w CAD:
 ## Dlaczego te wymiary
 
 - **Taca 210 mm:** największa, jaka mieści się w jednym kawałku na stole 220×220 mm. Większa taca daje kulce więcej miejsca, a nie wymaga sklejania.
-- **Promień 90 mm dla serw i uchwytów:** uchwyty są dokładnie nad osiami serw, więc cięgna stoją prawie pionowo, a siła z serwa idzie wprost do góry. Taka symetria upraszcza obliczenia.
+- **Promień 90 mm dla serw i uchwytów:** uchwyty są dokładnie nad osiami serw, więc cięgna stoją w płaszczyźnie przechodzącej przez środek tacy i są odchylone od pionu o ok. 24° ($\arcsin(24/60)$). Ok. 92% siły idzie w górę ($\cos24^\circ$), reszta to niewielki docisk boczny. Taka symetria upraszcza obliczenia.
 - **Orczyk 24 mm, cięgno 60 mm:** krótki orczyk daje precyzję (mały ruch tacy na stopień serwa), a dostatecznie długie cięgno ogranicza zmianę jego kąta podczas pracy.
 - **Serwa na boku, oś 28 mm nad blatem:** orczyk nie uderza w stół nawet przy $-35^\circ$.

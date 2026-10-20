@@ -30,7 +30,7 @@ Poprzednia: [[17 Taca, pałąk i baza]]. Dalej: [[19 Plan prac i testy]]. Powró
 *Po co:* obiektyw 120° zniekształca obraz i potrzebujemy współczynnika $f_{px}$ oraz środka obrazu do przeliczenia pikseli na milimetry ([[09 Kamera i wizja]]).
 
 1. **Arkusz kalibracyjny**: wydruk A4 z okręgami $r=25/50/75/100$ mm i siatką 10 mm. Kładziemy go na tacy tak, by środek okręgów był w środku tacy.
-2. Na ekranie **Kalibracja** znajdź środek obrazu i dopasuj $f_{px}$, aż okręgi z arkusza zgodzą się z okręgami modelu.
+2. Na ekranie **Kalibracja** znajdź środek obrazu i dopasuj $f_{px}$, aż okręgi z arkusza zgodzą się z okręgami modelu. Jeśli nie da się ich zgrać z błędem poniżej ok. 1 mm, przejdź na wielomian $r_{mm}=c_1 r_{px}+c_3 r_{px}^3$ dopasowany do czterech okręgów ([[09 Kamera i wizja]]).
 3. Ustaw obrót i odbicie osi (`swapXY`, `invX`, `invY`), aż strzałka "w prawo" przesuwa punkt zadany w prawo na tacy.
 4. Zapisz.
 
@@ -53,6 +53,21 @@ Gdy kulka jest od ponad 10 s w odległości $<5$ mm od środka i porusza się wo
 Prosty test: błysk diody LED w polu widzenia kamery i druga dioda lub oscyloskop na wyjściu PWM serwa. Czas od błysku do pierwszej zmiany sygnału to opóźnienie kamery + przetwarzania. Opóźnienie serwa mierzy się ruchem orczyka (odczyt z kamery lub nagranie wideo).
 
 Jeśli wyjdzie większe niż założenie, zmniejszamy $K_p$, bo marża stabilności spada.
+
+## 6. Pomiar $K$ (jak szybko przyspiesza kulka)
+
+*Po co:* wartość $K=5{,}89$ m/s² na radian to teoria dla cienkiej piłeczki bez tarcia ([[10 Dynamika kulki]]). Od $K$ zależy dokładność feed-forward na torach: błąd 20% zbliża nas do granicy 10 mm przy okręgu 60 mm, 1,5 rad/s ([[12 Trajektorie]]). Pomiar zajmuje kilka minut.
+
+1. Ustaw przechył tacy na stałe **3°** (ekran Trim albo komenda z konsoli) i **sprawdź go poziomnicą w telefonie**. Prawdziwy kąt może się różnić od zadanego przez luzy.
+2. Połóż kulkę przy krawędzi tacy po stronie "wyżej" i przytrzymaj ją palcem lub małym ogranicznikiem.
+3. Puść i nagrywaj pozycję z telemetrii (50 Hz) przez ok. 0,6 s.
+4. Dopasuj parabolę $x(t)=x_0+\tfrac12 a t^2$ do pierwszych 0,5 s po puszczeniu i policz $K=a/\sin\theta$.
+5. Powtórz po 5 razy w dwóch przeciwnych kierunkach i w obu osiach. Weź średnią.
+
+Oczekiwany wynik dla pingponga: $a\approx0{,}31$ m/s², czyli kulka przejeżdża ok. 38 mm w 0,5 s. Pozycję mierzymy z dokładnością ok. 1 mm, więc błąd pomiaru to kilka procent.
+
+- Jeśli zmierzone $K$ różni się od 5,89 o więcej niż 20%, sprawdź kąt (poziomnica), tarcie (folia, kurz) i czy kulka nie jest uszkodzona.
+- Wpisz wynik jako $K$ (profil kulki) i pomnóż nastawy PID przez $5{,}89/K_{zmierzone}$, bo wzmocnienie pętli zależy od $K$ ([[11 Regulator PID]]).
 
 ## Szum pozycji w spoczynku
 

@@ -47,6 +47,7 @@ To jest **spis treści** projektu. Każda notatka ma jeden temat, zaczyna się o
 | [[17 Taca, pałąk i baza]] | Płaskość tacy, sztywność pałąka, stabilność bazy |
 | [[16 Elementy do druku]] | Lista wydruków i ich kolejność |
 | [[24 Kod OpenSCAD cięgien]] | Gotowy kod do druku cięgien |
+| [[26 Projekt Fusion 360]] | **Model całości w Fusion 360** (skrypt): przechylanie, test kolizji, eksport STL |
 
 ## Wizja, fizyka i regulacja
 
@@ -74,13 +75,14 @@ To jest **spis treści** projektu. Każda notatka ma jeden temat, zaczyna się o
 | [[21 Firmware - Kamera]] | Zadania płytki z kamerą |
 | [[22 Firmware - Sterowanie]] | Rdzenie, stany, kinematyka, filtr, PID |
 | [[23 Firmware - Narzędzia i struktura]] | PlatformIO, struktura repo, biblioteki |
+| [[25 Firmware - Generator trajektorii]] | Okrąg, ósemka, kwadrat, ruch między punktami, regulator z feed-forward |
 
 ---
 
 ## Kolejne sesje (co jeszcze trzeba wygenerować)
 
-1. OpenSCAD #2: baza główna i panel konsoli (z `params.scad`).
-2. OpenSCAD #3: taca z uchwytami, pałąk C-Arm z regulacją wysokości kamery.
+1. ~~OpenSCAD #2: baza główna i panel konsoli (z `params.scad`).~~ Zrobione w Fusion 360: [[26 Projekt Fusion 360]].
+2. ~~OpenSCAD #3: taca z uchwytami, pałąk C-Arm z regulacją wysokości kamery.~~ Zrobione w Fusion 360: [[26 Projekt Fusion 360]]. Pierwsze uruchomienie w Fusion = sprawdzenie skryptu.
 3. Firmware kamery (po Etapie 1 testów).
 4. Firmware bazy (po Etapie 5).
 
